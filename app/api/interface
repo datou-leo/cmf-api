@@ -1,0 +1,79 @@
+用户登陆
+http://local.cmf.com/api/public/login?username=2323178881@qq.com&password=123456&device_type=web
+{
+  "code": 1,
+  "msg": "登录成功!",
+  "data": {
+    "token": "97bc4f67520e24d5d88864f8e42f1aae97bc4f67520e24d5d88864f8e42f1aae",
+    "user": {
+      "id": 1,
+      "user_type": 1,
+      "sex": 0,
+      "birthday": 0,
+      "last_login_time": 1556087696,
+      "score": 1,
+      "coin": 1,
+      "balance": "0.00",
+      "create_time": 1556087659,
+      "user_status": 1,
+      "user_login": "admin",
+      "user_pass": "###5a9714336d4bc7c5041cc14363743936",
+      "user_nickname": "admin",
+      "user_email": "2323178881@qq.com",
+      "user_url": "",
+      "avatar": "",
+      "signature": "",
+      "last_login_ip": "127.0.0.1",
+      "user_activation_key": "",
+      "mobile": "",
+      "more": null
+    }
+  }
+}
+
+发送验证码
+http://local.cmf.com/api/verification_code/send?username=18329123270
+{
+  "code": 1,
+  "msg": "验证码已经发送成功!",
+  "data": ""
+}
+
+用户注册
+http://local.cmf.com/api/public/register?username=18329123270&password=123456&verification_code=998159
+{
+  "code": 1,
+  "msg": "注册并激活成功,请登录!",
+  "data": ""
+}
+
+//重置密码
+http://local.cmf.com/api/public/passwordreset?username=18329123270&password=865912&verification_code=998159
+{
+  "code": 1,
+  "msg": "密码重置成功,请使用新密码登录!",
+  "data": ""
+}
+
+//退出登陆
+http://local.cmf.com/api/public/logout
+header:
+XX-Token:97bc4f67520e24d5d88864f8e42f1aae97bc4f67520e24d5d88864f8e42f1aae
+XX-Device-Type:web
+{
+  "code": 1,
+  "msg": "退出成功!",
+  "data": ""
+}
+
+//修改密码
+http://local.cmf.com/api/profile/changepassword?old_password=123456&password=963258&confirm_password=963258
+header:
+XX-Token:117dda9ec75fcd3d85aec6702967819f117dda9ec75fcd3d85aec6702967819f
+XX-Device-Type:web
+{
+  "code": 1,
+  "msg": "密码修改成功!",
+  "data": ""
+}
+
